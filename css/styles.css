@@ -41,7 +41,8 @@ body{
     display: grid;
     flex-direction: column;
     justify-content: space-between;
-    bottom:1%;
+    position: absolute;
+    top: 40%;
 }
 .items-buttons button{   
     background-color: #f05738;
@@ -49,7 +50,6 @@ body{
     border:none;
     border-radius:5px;
     outline: none;
-    padding: .5em 2em;
     margin: 0 1em;
     height: 40px;
     cursor: pointer;
@@ -60,6 +60,7 @@ body{
     width: 100%;
     color: #fff;
     font-size: 12px;
+    padding: 0;
 }
 #contact h2{
     color: #fff;
@@ -114,9 +115,7 @@ body{
     color: #f05738;
     
 }
-.items a{
-    width: 100%;
-}
+
 #name{
     width:8.125em;
     grid-column-start: 1;
