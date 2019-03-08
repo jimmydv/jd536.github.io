@@ -37,6 +37,30 @@ body{
     color: #6b6b6b;
     text-align: center;
 }
+.items-buttons{
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom:1%;
+}
+.items-buttons button{   
+    background-color: #f05738;
+    width: 120px;
+    border:none;
+    border-radius:5px;
+    outline: none;
+    padding: .5em 2em;
+    margin: 0 1em;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+
+}
+.items-buttons button a{
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+}
 #contact h2{
     color: #fff;
 }
@@ -90,7 +114,9 @@ body{
     color: #f05738;
     
 }
-
+.items a{
+    width: 100%;
+}
 #name{
     width:8.125em;
     grid-column-start: 1;
@@ -361,27 +387,8 @@ footer{
         
 }
 
-.git{
-    background-color: #f05738;
-    width: 120px;
-    border:none;
-    border-radius:5px;
-    outline: none;
-    padding: .5em 2em;
-    margin-bottom: 0;
-    height: 40px;
-    cursor: pointer;
-    color: #fff;
-    left: 28%;
-    bottom: 10%;
-    position: absolute;
-   
-}
-.git a,
-.view a{
-    color: white;
-    letter-spacing: 1px;
-}
+
+
     
  
 }
