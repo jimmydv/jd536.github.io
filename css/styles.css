@@ -19,7 +19,6 @@ body{
 }  
 #header{
     margin-top: 0;
-/*    margin-bottom: -50px;*/
     padding: 0;
 }
   #logo-mobile{
@@ -30,6 +29,86 @@ body{
       
     }
 
+#nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto ;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    }
+    
+    
+      #logo-mobile{
+          display: block;
+          width: 200px;
+          margin: 30px auto 0;
+          grid-column-start: 4;
+          grid-column-end: 6;
+}
+
+    #logo-mobile img{
+         width: 200px;
+    }
+
+    #logo{
+        display: none;
+    }
+    
+    #nav p a{
+        color: #6b6b6b;
+        text-transform: uppercase;
+    }
+
+    .text-left:nth-child(2){
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+    }
+
+    .text-left:nth-child(3){
+        text-align: right;
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 2;
+    }
+
+    .text-right:nth-child(5){
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+    }
+
+    .text-right:nth-child(6){
+        text-align: right;
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 3;
+    }
+    
+    #headerLine{
+        width: 20%;
+        margin-top: 2em;
+        
+    }
+
+    #intro{
+        text-align: center;    
+    }
+   
+     #myName {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+    .dots {
+        color: #f05738;
+    }
+    #header-about{
+        text-align: center;
+        color: #6b6b6b;
+         width: 90%;
+        margin: 1em auto;
+        padding: 5px;
+        letter-spacing: 2px;
+    }
 #portfolio h2, 
 #contact h2{
     padding-top: 1em;
@@ -37,6 +116,7 @@ body{
     color: #6b6b6b;
     text-align: center;
 }
+
 .items-buttons{
     display: grid;
     flex-direction: column;
@@ -44,6 +124,7 @@ body{
     position: absolute;
     top: 40%;
 }
+
 .items-buttons button{   
     background-color: #f05738;
     width: 120px;
@@ -56,15 +137,97 @@ body{
     color: #fff;
 
 }
+
 .items-buttons button a{
     width: 100%;
     color: #fff;
     font-size: 12px;
     padding: 0;
 }
+
+
+
+   #portfolio-grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-left:0;
+  
+}
+.items{
+    min-width: 300px;
+    min-height:300px;
+    border-radius: 50%;
+    border: 1px;
+    width: 300px;
+    height: 300px;
+    margin:10px;
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+.items div{
+  width:100%;
+  height:100%;
+  text-align:center;
+  color:#000;
+  overflow:hidden;
+}
+
+.items div img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+.items-overlay{
+    background-color: #fff;
+    background: rgba(255, 255, 255, .9);
+    position:absolute;   
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #f05738;
+    outline: none;
+    display: none;
+}
+
+    .items-overlay h1{
+        padding-top: 30px;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .items-overlay p{
+        padding: 0 20px;
+        margin-top: 0;
+    }
+
+.items-buttons{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3em;
+        
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            Contact section style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
 #contact h2{
     color: #fff;
 }
+
 #contact{
   margin: 80px auto;
   position: relative;
@@ -76,7 +239,6 @@ body{
   flex-direction:column;
   justify-content: center;
   color: #fff;
-    text-align: center;
 }
 
   .innerContact{
@@ -86,10 +248,11 @@ body{
 }
 .contactForm{
     display: grid;
-    grid-template-columns: repeat (4,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: 45px 45px  45px 45px  45px;
     grid-gap: 1em;
     flex-grow: 1;
+   
 }
 .contact-call{
     padding: 1em;
@@ -100,7 +263,7 @@ body{
     flex-grow: 1;
 }
 
-}
+
 .contact-call p:nth-child(1)::first-letter{
     text-transform: uppercase;
     font-weight: bold;
@@ -117,39 +280,50 @@ body{
 }
 
 #name{
-    width:8.125em;
+    width: 8.125em;
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     border-radius: 5px;
     padding: 5px;
+    border: none;
+    outline: none;
 }
 #email{
+    border: none;
     width: 8.125em;
-     grid-column-start:2;
-    grid-column-end: 4;    
+    grid-column-start:3;
+    grid-column-end: 5;    
     border-radius: 5px;
-     padding: 5px;
+    padding: 5px;
+    outline: none;
 }
 
 #phone{
+    width: 17.25em;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
     border-radius: 5px;
     padding: 5px;
+    border: none;
+    outline: none;
 }
 #message{
+    width: 17.25em;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 5;
     border-radius: 5px;
     padding: 5px;
+    border: none;
+    outline: none;
 }
 #sendEmail{
+    width: 17.25em;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 6;
     background-color: #f05738;
@@ -159,6 +333,17 @@ body{
     color: #fff;
     outline: none;
     margin-bottom: 1em;
+}
+#name:hover, #name:focus,
+#phone:hover,#phone:focus,
+#email:hover, #email:focus,
+#message:hover, #message:focus{
+    transform: scale(1.01);
+    background-color: azure;
+    transition: all 1s;
+}
+#sendEmail:hover{
+    
 }
     .social-media{
     text-align: center;
@@ -170,6 +355,11 @@ body{
     justify-content: space-around;
     padding:1em 2em;
 }
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    End Of Contact Section Style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
 .center-lines{
     width: 20%;
     color:#6b6b6b;
@@ -229,168 +419,11 @@ footer{
     text-align: center;
     color:#6b6b6b;
 }
-/*============================================================
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         Responsive Design (Media Queries)
-=============================================================*/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
-
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-                    -420px Media Query-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-@media screen and (min-width:420px){
-
-    #nav{
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto auto ;
-        grid-template-rows: auto auto auto auto;
-        justify-content: center;
-    }
-    
-    
-      #logo-mobile{
-          display: block;
-          width: 200px;
-          margin: 30px auto 0;
-          grid-column-start: 4;
-          grid-column-end: 6;
-}
-    #logo-mobile img{
-         width: 200px;
-    }
-    #logo{
-        display: none;
-    }
-    
-    #nav p a{
-        color: #6b6b6b;
-        text-transform: uppercase;
-    }
-    .text-left:nth-child(2){
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-    }
-    .text-left:nth-child(3){
-        text-align: right;
-        grid-column-start: 5;
-        grid-column-end: 6;
-        grid-row-start: 2;
-    }
-    .text-right:nth-child(5){
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 3;
-    }
-    .text-right:nth-child(6){
-        text-align: right;
-        grid-column-start: 5;
-        grid-column-end: 6;
-        grid-row-start: 3;
-    }
-    
-    #headerLine{
-        width: 20%;
-        margin-top: 2em;
-        
-    }
-    #intro{
-        text-align: center;    
-    }
-   
-     #myName {
-        font-size: 30px;
-        letter-spacing: 3px;
-    }
-    .dots {
-        color: #f05738;
-    }
-    #header-about{
-        text-align: center;
-        color: #6b6b6b;
-         width: 90%;
-        margin: 1em auto;
-        padding: 5px;
-        letter-spacing: 2px;
-    }
-     #portfolio-grid{
-    display: flex;
-        flex-direction:;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding-left:0;
-  
-}
-.items{
-    min-width: 300px;
-    min-height:300px;
-    border-radius: 50%;
-    border: 1px;
-    width: 300px;
-    height: 300px;
-    margin:10px;
-    position: relative;
-    cursor: pointer;
-    
-    
-}
-      .items div{
-  width:100%;
-  height:100%;
-  text-align:center;
-  color:#000;
-  overflow:hidden;
-}
-.items div img{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-
-.items-overlay{
-    background-color: #fff;
-    background: rgba(255, 255, 255, .9);
-    position:absolute;
-    
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid #f05738;
-    outline: none;
-    display: none;
-}
-
-    .items-overlay h1{
-        padding-top: 30px;
-        font-size: 20px;
-        margin-bottom: 0;
-    }
-    .items-overlay p{
-        padding: 0 20px;
-        margin-top: 0;
-    }
-
-.items-buttons{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 3em;
-        
-}
-
-
-
-    
- 
-}
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
                     -640px Media Query-
@@ -498,101 +531,7 @@ footer{
     letter-spacing: 1px;
 }
     
-/*===========================================
-    CONTACT SECTION STYLE
-=============================================*/
 
-#contact{
-  margin: 80px auto;
-  position: relative;
-  width: 80%;
-  height: 620px;
-  padding:0 1em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  background-color: #00293a;
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-}
-.innerContact{
-    display: flex;
-    flex-direction:column;
-}
-.contactForm{
-    display: grid;
-    grid-template-columns: repeat (4,1fr);
-    grid-template-rows: 45px 45px  45px 45px  45px;
-     width: 50%;
-
-    grid-gap: 1em;
-    flex-grow: 1;
-}
-.contact-call{
-    color:#fff;
-    letter-spacing: 2px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 1em;    
-    }
-    
-.contact-call h2{
-    font-weight: 200;
-    text-transform: uppercase;
-}
-.contact-call p:nth-child(3){
-    font-weight:lighter;
-    color: #fff;
-}
-.contact-call a{
-    color: #f05738;
-    
-}
-
-#name{
-    width:8.125em;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border-radius: 5px;
-    padding: 5px;
-}
-#email{
-    width: 8.125em;
-     grid-column-start:2;
-    grid-column-end: 4;    
-    border-radius: 5px;
-     padding: 5px;
-}
-
-#phone{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    border-radius: 5px;
-    padding: 5px;
-}
-#message{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 5;
-    border-radius: 5px;
-    padding: 5px;
-}
-#sendEmail{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    background-color: #f05738;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    color: #fff;
-    outline: none;
-}
   .social-media{
     justify-content: space-between;
     padding:0 6em;
@@ -719,6 +658,7 @@ footer{
 }
     .contact-call{
         text-align: left;
+        width: 50%;
         padding:0;
         margin-top: 0;
         align-self: flex-start
@@ -729,7 +669,17 @@ footer{
         padding: 0;
     }  
 
-
+    .contactForm{
+        width: 50%;
+        
+    }
+    #name, 
+    #email,
+    #phone,
+    #message, 
+    #sendEmail{
+        width: 100%;
+    }
     
 }
 
