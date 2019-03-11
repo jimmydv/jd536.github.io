@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $(".items").mouseenter(function(){
+    var items = $(".items");
+ items.mouseenter(function(){
          let overlay = $(this).find(".items-overlay");  
         
            
