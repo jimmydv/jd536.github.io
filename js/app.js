@@ -21,14 +21,14 @@ $(function(){
 
 
 var moreBtn = $("#readMore").click(function(){
-    $("#readMoreDots").hide();
-    $("#more").show();
+    $("#readMoreDots").fadeOut("slow");
+    $("#more").slideDown("slow");
     if(moreBtn.text()==="More"){
     moreBtn.text("Less");
     }else{
         moreBtn.text("More");
-        $("#more").hide();
-        $("#readMoreDots").show();
+        $("#more").slideUp("slow");
+        $("#readMoreDots").fadeIn("slow");
     }
 });
 

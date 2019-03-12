@@ -128,6 +128,10 @@ body{
         padding: 5px;
         letter-spacing: 2px;
     }
+#header-about a{
+    color: #16a6b6;
+}
+
 #portfolio h2, 
 #contact h2{
     padding-top: 1em;
@@ -375,8 +379,8 @@ body{
     font-size: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 1em 2em;
+    justify-content: space-between;
+    padding: 1em;
 }
 .social-media a:first-child{
     color: #3b5998;
